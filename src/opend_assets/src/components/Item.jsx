@@ -10,7 +10,7 @@ function Item(props) {
   const [ownerID, setOwnerID] = useState();
   const [image, setImage] = useState();
 
-  const id = props.id;
+  const id = Principal.fromText(props.id);
 
   const localHost = "http://localhost:8080/"; //Replace with ICP address
   const agent = new HttpAgent({host: localHost});
